@@ -1,65 +1,189 @@
-import Image from "next/image";
+import SimpleMap from "@/components/Map";
+import GoogleReviewsSection from "@/components/Reviews";
+import {
+  HiOutlineHomeModern,
+  HiOutlineDocumentCheck,
+  HiOutlineMegaphone,
+  HiOutlineCalculator,
+  HiOutlineScale,
+} from "react-icons/hi2";
 
-export default function Home() {
+const properties = [
+  {
+    id: 1,
+    title: "Villa Moderna con Giardino",
+    location: "Torino, Collina",
+    price: "€ 890.000",
+    image:
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: 2,
+    title: "Attico di Pregio in Centro",
+    location: "Milano, Brera",
+    price: "€ 1.250.000",
+    image:
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: 3,
+    title: "Appartamento Luminoso",
+    location: "Roma, Parioli",
+    price: "€ 540.000",
+    image:
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
+const services = [
+  {
+    id: 1,
+    title: "VALUTAZIONE GRATUITA",
+    text: "Analisi accurata del valore dell’immobile in base a zona, stato e andamento del mercato.",
+    icon: <HiOutlineHomeModern />,
+  },
+  {
+    id: 2,
+    title: "CONTROLLI COMUNALI",
+    text: "Verifica documentale e urbanistica per una compravendita più sicura e trasparente.",
+    icon: <HiOutlineDocumentCheck />,
+  },
+  {
+    id: 3,
+    title: "PUBBLICITA’",
+    text: "Promozione dell’immobile con presentazione curata e visibilità sui canali principali.",
+    icon: <HiOutlineMegaphone />,
+  },
+  {
+    id: 4,
+    title: "ASSISTENZA FINANZIARIA",
+    text: "Supporto nella ricerca della soluzione economica più adatta alle esigenze del cliente.",
+    icon: <HiOutlineCalculator />,
+  },
+  {
+    id: 5,
+    title: "NOTAIO",
+    text: "Affiancamento fino al rogito con professionisti qualificati in ogni fase finale.",
+    icon: <HiOutlineScale />,
+  },
+];
+
+export default function HomePage() {
+  let buttonHeroText = "scopri di più";
+  let welcomeText = "benvenuti";
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      <header className="hero">
+        <video className="heroVideo" autoPlay muted loop playsInline>
+          <source src="/videos/torino.mp4" type="video/mp4" />
+        </video>
+
+        <div className="heroOverlay" />
+
+        <section className="heroContent container">
+          <h1>{welcomeText.toUpperCase()}</h1>
+          <img
+            src="/images/ab_scontornato.png"
+            alt="AB Immobiliare"
+            className="heroLogo"
+          />
+          <a href="#about" className="heroScroll" aria-label="Vai alla sezione Chi sono">
+            <span className="heroScrollMouse">
+              <span className="heroScrollWheel"></span>
+            </span>
+            <span className="heroScrollArrow">↓</span>
+          </a>
+        </section>
+      </header>
+
+      <section id="about" className="section aboutSection">
+        <div className="container aboutWrapper">
+          {/* <div className="aboutImageBox">
+            <img
+              src="/images/bea_4.png"
+              alt="Consulente immobiliare"
+              className="aboutImage"
+            />
+          </div> */}
+
+          <div className="aboutContent">
+            {/* <p className="sectionLabel">Chi sono</p> */}
+
+            <h2 className="aboutTitle creamCake">
+              Il tuo obiettivo è vendere.
+              <br />
+              Il mio è farlo al meglio.
+            </h2>
+
+            <hr className="aboutDivider" />
+
+            <p className="aboutText">
+              Con una solida conoscenza del mercato immobiliare di Torino e della sua
+              provincia, offro consulenze personalizzate per accompagnare ogni cliente
+              nelle scelte più importanti legate alla propria casa.
+            </p>
+
+            <p className="aboutText">
+              Vendere, acquistare o affittare un immobile è una decisione importante.
+              Per questo lavoro con attenzione, trasparenza e professionalità,
+              affiancando il cliente in ogni fase del percorso e mettendo sempre le
+              sue esigenze al centro della trattativa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="section servicesSection">
+        <div className="container">
+          <div className="sectionHeading servicesHeading">
+            <div>
+              <p className="sectionLabel">Servizi</p>
+              <h2>Servizi pensati per accompagnarti in ogni fase</h2>
+            </div>
+            <p className="muted maxText">
+              Un supporto concreto, chiaro e professionale per affrontare ogni
+              passaggio della compravendita con maggiore serenità.
+            </p>
+          </div>
+
+          <div className="servicesGrid">
+            {services.map((service) => (
+              <article key={service.id} className="serviceCardCompact">
+                <div className="serviceIcon">{service.icon}</div>
+                <div className="serviceContent">
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+<GoogleReviewsSection></GoogleReviewsSection>
+
+{/* 
+      <section id="contact" className="section container contactBox">
+        <div>
+          <p className="sectionLabel">Contatti</p>
+          <h2>Parliamo del tuo prossimo immobile</h2>
+          <p className="muted">
+            Che tu voglia vendere, acquistare o valorizzare una proprietà,
+            possiamo costruire insieme il percorso più adatto.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <form className="contactForm">
+          <input type="text" placeholder="Nome e cognome" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Descrivi la tua richiesta" rows={5} />
+          <button type="submit" className="btn btnPrimary">
+            Invia richiesta
+          </button>
+        </form>
+      </section> */}
+    </main>
   );
 }
