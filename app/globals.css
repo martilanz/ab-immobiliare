@@ -110,6 +110,7 @@ button {
   height: 100%;
   object-fit: cover;
   z-index: 0;
+    pointer-events: none;
 }
 
 .heroOverlay {

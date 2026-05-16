@@ -75,9 +75,17 @@ export default function HomePage() {
   return (
     <main>
       <header className="hero">
-        <video className="heroVideo" autoPlay muted loop playsInline>
-          <source src="/videos/torino.mp4" type="video/mp4" />
-        </video>
+      <video
+        className="heroVideo"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/images/hero-fallback.jpg"
+      >
+        <source src="/videos/torino.mp4" type="video/mp4" />
+      </video>
 
         <div className="heroOverlay" />
 
