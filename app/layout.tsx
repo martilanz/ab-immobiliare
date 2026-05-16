@@ -15,8 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arbarello Immobiliare",
-  description: "-",
+  title: "Beatrice Arbarello Immobiliare | Agenzia immobiliare a Orbassano",
+  description:
+    "Beatrice Arbarello Immobiliare offre consulenza per vendita, acquisto e valorizzazione di immobili a Orbassano e dintorni.",
+  keywords: [
+    "Beatrice immobiliare",
+    "Beatrice Arbarello immobiliare",
+    "agenzia immobiliare Orbassano",
+    "immobiliare Orbassano",
+    "vendita case Orbassano",
+  ],
 };
 
 
