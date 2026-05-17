@@ -75,18 +75,18 @@ export default function HomePage() {
   return (
     <main>
       <header className="hero">
-      <video
-  className="heroVideo"
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  disablePictureInPicture
-  controls={false}
->
-  <source src="/videos/torino.mp4" type="video/mp4" />
-</video>
+        <video
+          className="heroVideo"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          controls={false}
+        >
+          <source src="/videos/torino.mp4" type="video/mp4" />
+        </video>
 
         <div className="heroOverlay" />
 
@@ -171,9 +171,9 @@ export default function HomePage() {
       </section>
 
 
-<GoogleReviewsSection></GoogleReviewsSection>
+      <GoogleReviewsSection></GoogleReviewsSection>
 
-{/* 
+      {/* 
       <section id="contact" className="section container contactBox">
         <div>
           <p className="sectionLabel">Contatti</p>
