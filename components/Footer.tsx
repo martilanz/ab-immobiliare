@@ -59,7 +59,7 @@ export default function Footer() {
           <ul className="footerSocial">
             <li>
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/libertycaseorbassano/?locale=it_IT"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -70,7 +70,7 @@ export default function Footer() {
 
             <li>
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/libertycaseorbassano/"
                 target="_blank"
                 rel="noreferrer"
               >

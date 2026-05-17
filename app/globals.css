@@ -1125,18 +1125,34 @@ background-size:     cover;                      /* <------ */
   color: var(--muted);
 }
 
-.reviewsGrid {
+/* .reviewsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+} */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 24px;
+  width: 100%;
 }
 
+
+.reviewText {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
 .reviewCard {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow);
+    min-width: 0;
+  width: 100%;
 }
 
 .reviewCardTop {
@@ -1166,16 +1182,98 @@ background-size:     cover;                      /* <------ */
   line-height: 1.2;
 }
 
-.reviewText {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.75;
-}
+
 
 .reviewsCta {
   margin-top: 32px;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 960px) {
+  .reviewsHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .reviewsSummary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .reviewCard {
+    padding: 20px;
+  }
+
+  .reviewsCta {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviewsSection {
+    padding: 40px 0;
+  }
+
+  .reviewsHeading {
+    align-items: stretch;
+  }
+
+  .reviewsHeading h2 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .reviewsSummary {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .reviewsSummaryTop {
+    justify-content: flex-start;
+  }
+
+  .reviewsScore {
+    font-size: 24px;
+  }
+
+  .reviewCard {
+    padding: 18px;
+  }
+
+  .reviewCardTop {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .reviewAvatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 18px;
+  }
+
+  .reviewCard h3 {
+    font-size: 17px;
+  }
+
+  .reviewText {
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .reviewsCta .btn {
+    width: 100%;
+  }
 }
 
 .aboutWrapper {
