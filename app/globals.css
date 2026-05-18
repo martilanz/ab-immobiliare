@@ -103,6 +103,40 @@ button {
   overflow: hidden;
 }
 
+.heroScroll {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.heroScrollArrow {
+  font-size: 2rem;
+  color: #fff;
+  animation: arrowBounce 1.8s ease-in-out infinite;
+  line-height: 1;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
 .heroVideo {
   position: absolute;
   inset: 0;

@@ -26,15 +26,15 @@ export default function About() {
     di venditori. Fin da giovane ho sviluppato una naturale predisposizione per
     il contatto con le persone e per il mondo della vendita.
   </p> <p>
-    Nel 2021 ho intrapreso il mio percorso nel settore immobiliare, iniziando a
-    lavorare presso Liberty Case a Orbassano. Dopo una prima esperienza nel
+    Nel 2021 ho intrapreso il mio percorso nel <b>settore immobiliare</b>, iniziando a
+    lavorare presso <b>Liberty Case</b> a <b>Orbassano</b>. Dopo una prima esperienza nel
     settore degli affitti, ho ampliato progressivamente la mia attività anche
     alle compravendite, seguendo i clienti in tutte le fasi della trattativa.
   </p>
 
   <p>
-    Credo in un approccio basato su trasparenza, disponibilità e
-    professionalità, valori fondamentali per affrontare con serenità uno dei
+    Credo in un approccio basato su <b>trasparenza</b>, <b>disponibilità</b> e
+    <b>professionalità</b>, valori fondamentali per affrontare con serenità uno dei
     momenti più importanti nella vita di una persona.
   </p>
 
@@ -56,7 +56,7 @@ export default function About() {
               <h2>Tre elementi che guidano il mio lavoro</h2>
             </div>
             <p className="muted maxText">
-              Un metodo basato sull’ascolto, sulla competenza e su un supporto
+              Un metodo basato sull’ ascolto, sulla competenza e su un supporto
               costante in tutte le fasi della compravendita.
             </p>
           </div>

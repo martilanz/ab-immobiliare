@@ -63,7 +63,7 @@ const services = [
   {
     id: 5,
     title: "NOTAIO",
-    text: "Affiancamento fino al rogito con professionisti qualificati in ogni fase finale.",
+    text: "Affiancamento fino al rogito notarile in ogni fase.",
     icon: <HiOutlineScale />,
   },
 ];
