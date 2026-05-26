@@ -6,7 +6,7 @@ export default function About() {
         <div className="container aboutPageGrid">
           <div className="aboutPageImageBox">
             <img
-              src="/images/bea_4.png"
+              src="/images/bea_5.jpeg"
               alt="Consulente immobiliare"
               className="aboutPageImage"
             />

@@ -983,6 +983,9 @@ background-size:     cover;                      /* <------ */
   object-fit: cover;
   display: block;
   border-radius: 20px;
+      object-position: 78% 50%;
+
+
 }
 
 .aboutPageContent h2 {
