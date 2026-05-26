@@ -13,9 +13,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "Beatrice Arbarello Immobiliare | Agenzia immobiliare a Orbassano",
+  title: {
+    default: "Agenzia immobiliare a Orbassano | Beatrice Arbarello",
+    template: "%s | Beatrice Arbarello",
+  },
   description:
     "Beatrice Arbarello Immobiliare offre consulenza per vendita, acquisto e valorizzazione di immobili a Orbassano e dintorni.",
   keywords: [
@@ -25,8 +27,16 @@ export const metadata: Metadata = {
     "immobiliare Orbassano",
     "vendita case Orbassano",
   ],
+  openGraph: {
+    title: "Agenzia immobiliare a Orbassano | Beatrice Arbarello",
+    description:
+      "Beatrice Arbarello Immobiliare offre consulenza per vendita, acquisto e valorizzazione di immobili a Orbassano e dintorni.",
+    url: "https://www.arbarellobeatriceimmobiliare.it",
+    siteName: "Beatrice Arbarello Immobiliare",
+    locale: "it_IT",
+    type: "website",
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -34,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
