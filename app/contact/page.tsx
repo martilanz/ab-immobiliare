@@ -63,7 +63,7 @@ export default function ContactPage() {
 
                                 <div className="contactInfoText">
                                     <p className="sectionLabel">Telefono</p>
-                                    <p>+39 333 123 4567 / +39 011 123 4567</p>
+                                    <p>+39 393-9892078 / +39 011-9005113</p>
                                 </div>
                             </div>
                         </div>
