@@ -50,7 +50,8 @@ export default function ContactPage() {
 
                                 <div className="contactInfoText">
                                     <p className="sectionLabel">Email</p>
-                                    <p>info@libertycase.it</p>
+                                    <a href="mailto:info@libertycase.it" className="glowLink">info@libertycase.it</a>
+
                                 </div>
                             </div>
                         </div>
@@ -63,7 +64,10 @@ export default function ContactPage() {
 
                                 <div className="contactInfoText">
                                     <p className="sectionLabel">Telefono</p>
-                                    <p>+39 393-9892078 / +39 011-9005113</p>
+                                    <a href="tel:+393939892078" className="glowLink"
+                                    >+39 393 9892078</a>
+                                    <a href="tel:+390119005113" className="glowLink"
+                                    >+39 011 9005113</a>
                                 </div>
                             </div>
                         </div>
