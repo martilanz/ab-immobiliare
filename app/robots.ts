@@ -1,27 +1,11 @@
-// app/sitemap.ts
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://www.arbarellobeatriceimmobiliare.it";
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `${baseUrl}/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      allow: "/",
     },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+    sitemap: "https://arbarellobeatriceimmobiliare.it/sitemap.xml",
+  };
 }
